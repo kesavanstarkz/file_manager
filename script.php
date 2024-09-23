@@ -125,7 +125,8 @@ if (isset($_POST["create_folder"]) && isset($_POST["input_data"])) {
                         echo "<td>";
                         if (is_file($file_path)) {
                             echo "<a href='delete_file.php?file_name=$file_path' class='text-danger'>Delete</a> | ";
-                            echo "<a href='read_file.php?file_name=$file_path' class='text-success'>Read</a>";
+                            echo "<a href='read_file.php?file_name=$file_path' class='text-success'>Read</a> | ";
+                            echo "<a href='edit_file.php?file_name=$file_path' class='text-info'>Edit</a>";
                         } else {
                             echo "<a href='delete_folder.php?folder_name=$file_path' class='text-danger'>Delete Folder</a>";
                         }
