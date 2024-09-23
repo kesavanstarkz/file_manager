@@ -128,7 +128,7 @@ if (isset($_POST["create_folder"]) && isset($_POST["input_data"])) {
                             echo "<a href='read_file.php?file_name=$file_path' class='text-success'>Read</a> | ";
                             echo "<a href='edit_file.php?file_name=$file_path' class='text-info'>Edit</a>";
                         } else {
-                            echo "<a href='delete_folder.php?folder_name=$file_path' class='text-danger'>Delete Folder</a>";
+                            echo "<a href='delete_folder.php?folder_name=$file_path' class='text-danger'>Delete Folder</a> | <a href='view_folder.php?folder_name=$file_path' class='text-success'>View Folder</a>";
                         }
                         echo "</td>";
                         echo "</tr>";
