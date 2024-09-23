@@ -86,6 +86,7 @@ if (isset($_POST["create_folder"])) {
                     <th>Folder</th>
                     <th>Date Created</th>
                     <th>Size</th>
+                    <th>Mode</th>
                 </tr>
             </thead>
             <tbody>
@@ -98,6 +99,7 @@ if (isset($_POST["create_folder"])) {
                         echo "<td>$total_path</td>";
                         echo "<td>" . date("Y-m-d H:i:s", filemtime($file_path)) . "</td>";
                         echo "<td>" . round(filesize($file_path) / 1024, 2) . " KB</td>";
+                        echo "<td><a href='delete_file.php?file_name=$file_path' class='text-danger'>Delete now</a> | <a href='read_file.php?file_name=$file_path' class='text-success'>Read now</a></td>";
                         echo "</tr>";
                     }
                 }
